@@ -3,8 +3,26 @@
 
 <div class="row">
   <div class="col-md-6">
-    <app-pokemon-input class="mt-3"></app-pokemon-input>
+    <app-pokemon-input
+      class="mt-3"
+      (OnEnter)="buscarPokemon($event)"
+    ></app-pokemon-input>
   </div>
 </div>
 
-<div class="row"></div>
+<div class="row mt-3">
+  <div class="col-md-6" *ngFor="let pokemon of pokemones">
+    <div class="card" style="width: 18rem">
+      <img [src]="pokemon.image" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Nombre del Pokemon:</h5>
+        <p class="card-text">{{ pokemon.name }}</p>
+        <h5 class="card-title">Peso del Pokemon:</h5>
+        <p class="card-text">{{ pokemon.weight }}</p>
+        <h5 class="card-title">tipos del Pokemon:</h5>
+        <p class="card-text">{{ pokemon.types }}</p>
+        <button class="btn btn-primary">Agregar al equipo</button>
+      </div>
+    </div>
+  </div>
+</div>

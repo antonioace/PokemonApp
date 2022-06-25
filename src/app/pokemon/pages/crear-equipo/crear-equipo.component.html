@@ -1,1 +1,25 @@
-<p>crear-equipo works!</p>
+<h2 class="text-success">Ingresa el nombre de tu equipo Pokemon !!!</h2>
+
+<form (ngSubmit)="guardar()">
+  <div class="row mt-3">
+    <div class="col-md-3">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label"
+          >Nombre del equipo:</label
+        >
+      </div>
+    </div>
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="nombreEquipo"
+        name="nombreEquipo"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>

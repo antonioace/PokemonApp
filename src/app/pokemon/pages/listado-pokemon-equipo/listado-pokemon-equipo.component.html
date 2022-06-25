@@ -1,1 +1,15 @@
-<p>listado-pokemon-equipo works!</p>
+<h2 class="text-success">Listado de equipos Pokemon</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let equipo of equipos; let i = index">
+      <th scope="row">{{ i }}</th>
+      <td>{{ equipo.nombre }}</td>
+    </tr>
+  </tbody>
+</table>

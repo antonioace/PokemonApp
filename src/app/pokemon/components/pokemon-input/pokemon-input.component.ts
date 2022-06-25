@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { PokemonServiceService } from '../../services/pokemon-service.service';
 
 @Component({
   selector: 'app-pokemon-input',
@@ -10,9 +11,9 @@ export class PokemonInputComponent implements OnInit {
   termino: string = '';
 
   buscar() {
-    console.log(this.termino);
+    this.OnEnter.emit(this.termino);
   }
-  constructor() {}
+  constructor(private pokemonService: PokemonServiceService) {}
 
   ngOnInit(): void {}
 }
