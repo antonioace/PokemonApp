@@ -1,1 +1,25 @@
-<p>ver-pokemon works!</p>
+<div class="container">
+
+
+    <div class="row">
+
+        <div class="col-md-6 mb-3">
+            <div class="card" style="width: 18rem">
+                <img [src]="pokemon.image" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <h4 class="card-title text-danger">Nombre del Pokemon:</h4>
+                    <p class="card-text">{{ pokemon.name | uppercase}}</p>
+                    <h4 class="card-title text-success">Peso del pokemon :</h4>
+                    <p class="card-text">{{ pokemon.weight }} Gr</p>
+
+                    <h4 class="card-title text-dark">Habilidades del pokemon :</h4>
+                    <p class="card-text">{{ pokemon.types }}</p>
+
+                    <button class="btn btn-outline-primary" (click)="regresar()">Regresar ...</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
